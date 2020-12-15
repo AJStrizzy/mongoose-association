@@ -3,13 +3,15 @@ const mongoose = require('mongoose');
 const commentSchema = new mongoose.Schema({
     header: String,
     content: String,
-    date: Date,
+    date: Date
 })
+ 
+
 
 const blogPostSchema = new mongoose.Schema({
     title: String,
     body: String,
-    comments: [commentSchema],
+    comments: [commentSchema]
 });
 
 const BlogPost = mongoose.model('BlogPost', blogPostSchema);
